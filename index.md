@@ -4,7 +4,8 @@
 
 - [Analyzing *The Password Game* with Python data libraries](/password-game-stats)
 
-## Contact
+## Elsewhere
 
+- [Credly](https://www.credly.com/users/olivia-chrisley/)
 - Github: [vvchrisley](https://github.com/vvchrisley)
 - Email: [oliviachrisley5@proton.me](mailto:oliviachrisley5@proton.me)

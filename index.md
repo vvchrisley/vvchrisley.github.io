@@ -6,6 +6,7 @@ I teach game development at Code Ninjas Northeast Florida, and I'm also a senior
 
 ## My projects
 
+- [Predictive modeling housing displacement - AI For Good Hackathon 2025](https://devpost.com/software/specter-67bu40)
 - pxt-mazegen — Maze generation extension for Microsoft MakeCode (coming soon)
 - [Analyzing *The Password Game* with Python data libraries](/password-game-stats)
 

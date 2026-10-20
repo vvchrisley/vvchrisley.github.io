@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olivia Chrisley - Computer Science, COBOL and z/OS</title>
+<style>
+:root {
+  --paper: #f3f5f6;
+  --ink: #17232b;
+  --muted: #4d5d68;
+  --rule: #cdd6db;
+  --accent: #006d77;
+  --card: #10222b;
+  --card-ink: #d8eef0;
+  --card-dim: #7fa3aa;
+}
+* { box-sizing: border-box; }
+html { font-size: 112.5%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Charter, "Bitstream Charter", Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+main { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+h1 {
+  font-size: 3rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.35rem;
+  margin: 3rem 0 0.75rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--ink);
+}
+h3 { font-size: 1.05rem; margin: 1.5rem 0 0.15rem; }
+p { margin: 0.5rem 0; max-width: 40rem; }
+ul { padding-left: 1.2rem; margin: 0.5rem 0; max-width: 40rem; }
+li { margin: 0.3rem 0; }
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { color: var(--ink); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.lede { font-size: 1.2rem; color: var(--muted); margin-bottom: 1.5rem; }
+.meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.4rem; }
+.links { margin: 1rem 0 2rem; }
+.links a { margin-right: 1.25rem; }
+pre {
+  background: var(--card);
+  color: var(--card-ink);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Courier New", monospace;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  padding: 1.1rem 1.25rem;
+  margin: 0 0 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+pre .c { color: var(--card-dim); }
+.skills dt { font-weight: 700; margin-top: 0.75rem; }
+.skills dd { margin: 0; }
+footer { margin-top: 3.5rem; color: var(--muted); font-size: 0.85rem; }
+@media (max-width: 30rem) {
+  h1 { font-size: 2.25rem; }
+  html { font-size: 100%; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Olivia Chrisley</h1>
+  <p class="lede">Computer science student at the University of North Florida, graduating December 2026. I write COBOL and JCL on z/OS, and I enjoy figuring out how systems work underneath.</p>
+  <pre aria-label="A JCL job card summarizing my background"><span class="c">//*  JOB CARD FOR A NEW GRADUATE</span>
+//CHRISLEY JOB (UNF),'OLIVIA CHRISLEY',CLASS=A
+<span class="c">//*  B.S. COMPUTER SCIENCE ........ DEC 2026
+//*  IBM Z 101 CERTIFICATE ........ DONE
+//*  CCNA ......................... DONE
+//*  Z XPLORE ALL STAR BADGE ...... FIRST 3 TO FINISH</span>
+//STEP1    EXEC PGM=OLIVIA
+//SYSOUT   DD  SYSOUT=*
+<span class="c">//*  OPEN TO RELOCATION</span></pre>
+  <p class="links">
+    <a href="mailto:oliviachrisley5@proton.me">Email</a>
+    <a href="https://github.com/vvchrisley">GitHub</a>
+    <a href="resume.pdf">Resume (PDF)</a>
+  </p>
+</header>
+
+<section>
+  <h2>Mainframe experience</h2>
+  <p>I took Enterprise COBOL for Fintech in Fall 2025 and earned an A. The course was built around the IBM Z 101 certificate, with assignments based on real programming and debugging problems from our instructor's career in fintech.</p>
+  <ul>
+    <li>Wrote and debugged COBOL programs and JCL, including jobs that use z/OS utilities to merge and copy data sets.</li>
+    <li>Worked in z/OS through Zowe (CLI and VS Code), ISPF, TSO, and SDSF, and allocated and edited data sets in both graphical and 3270 environments.</li>
+    <li>Gained exposure to VSAM, DB2, CICS, and REXX while completing the IBM Z 101 badge.</li>
+    <li>Studied mainframe architecture and OS concepts, including RACF security and Assembler.</li>
+    <li>Was one of the first 3 students to complete the IBM Z Xplore All Star badge. I also shared a Zowe configuration with classmates that shows the class mainframe and the Z Xplore mainframe side by side in VS Code.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <h3>Logic circuit simulator</h3>
+  <p class="meta">First place, Audience Choice, UNF SoC Symposium | Spring 2026</p>
+  <p>A custom hardware description language with Python-style syntax and a restricted set of Verilog features, including its grammar. My interpreter compiles a circuit into a graph of components and computes its output. A Flask app shows the signal flowing through each logic gate.</p>
+
+  <h3>IC floorplanner</h3>
+  <p class="meta">Spring 2026</p>
+  <p>Implements algorithms from academic papers to compute chip layout area, using Intel's FloorSet data. Simulated annealing minimizes a cost function of area plus wire length, and an interactive PyQt app lets you watch the layout improve at each step.</p>
+
+  <h3>Multi-device Bluetooth speaker hub</h3>
+  <p class="meta">Fall 2025</p>
+  <p>A Raspberry Pi that acts as a discoverable Bluetooth device and tracks which phones and laptops are connected, using a small database of MAC addresses. A web app on the Pi lets users pick which device plays audio. I could not find anyone who had built it this way, so I learned how the Linux Bluetooth and audio tools fit together and combined them myself.</p>
+
+  <h3>AI For Good Hackathon</h3>
+  <p class="meta">2025</p>
+  <p>In 48 hours, my team built a logistic regression model that predicts which neighborhoods are at high risk of housing displacement, using historical census data and open-source geographic boundaries. We presented the results to a panel of local business and community organization representatives.</p>
+</section>
+
+<section>
+  <h2>Work experience</h2>
+  <h3>Technology Instructor, Code Ninjas</h3>
+  <p class="meta">Jacksonville, FL | February 2025 to present</p>
+  <ul>
+    <li>Teach programming, robotics, and AI to students ages 5 to 14, adapting lessons to many skill levels.</li>
+    <li>Part of the Sensei team named Most Engaged in the US for 2026, out of more than 250 Code Ninjas locations.</li>
+    <li>Lead tours for prospective families and represent Code Ninjas at community events such as STEM nights.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Mainframe</dt>
+    <dd>COBOL, JCL, REXX, Assembler, z/OS, ISPF, TSO, SDSF, Zowe, VSAM, DB2, CICS, RACF</dd>
+    <dt>Programming</dt>
+    <dd>C, Python, JavaScript, TypeScript, HTML, CSS, SQL, shell scripting</dd>
+    <dt>Systems and networking</dt>
+    <dd>Linux (5+ years, Arch), Windows, Cisco IOS, VLANs, EtherChannel, IP addressing, Cisco Packet Tracer</dd>
+    <dt>Tools</dt>
+    <dd>GitHub, Docker, Microsoft Office</dd>
+  </dl>
+</section>
+
+<footer>
+  <p>Written by hand in HTML so it loads anywhere, including here.</p>
+</footer>
+
+</main>
+</body>
+</html>

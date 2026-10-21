@@ -48,7 +48,10 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .lede { font-size: 1.2rem; color: var(--muted); margin-bottom: 1.5rem; }
 .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.4rem; }
 .links { margin: 1rem 0 2rem; }
-.links a { margin-right: 1.25rem; }
+.links a { margin-right: 1.25rem; display:inline-block; }
+#portrait {width:200px;float:left; margin: 0 1rem 1.25rem 0;}
+#hackathon {width:325px; max-width:60%; float:right; margin: 1rem 0 1rem 1rem;}
+#exp {clear:both;}
 pre {
   background: var(--card);
   color: var(--card-ink);
@@ -59,10 +62,12 @@ pre {
   margin: 0 0 1rem;
   border-radius: 4px;
   overflow-x: auto;
+ clear: both; 
 }
-pre .c { color: var(--card-dim); }
+pre .c { color: var(--card-dim);}
 .skills dt { font-weight: 700; margin-top: 0.75rem; }
 .skills dd { margin: 0; }
+footer { margin-top: 3.5rem; color: var(--muted); font-size: 0.85rem; }
 @media (max-width: 30rem) {
   h1 { font-size: 2.25rem; }
   html { font-size: 100%; }
@@ -74,6 +79,7 @@ pre .c { color: var(--card-dim); }
 
 <header>
   <h1>Olivia Chrisley</h1>
+<img id="portrait" src="portrait.jpg"/>
   <p class="lede">Computer science student at the University of North Florida, graduating December 2026. I write COBOL and JCL on z/OS, and I enjoy figuring out how systems work underneath.</p>
   <pre aria-label="A JCL job card summarizing my background"><span class="c">//*  JOB CARD FOR A NEW GRADUATE</span>
 //CHRISLEY JOB (UNF),'OLIVIA CHRISLEY',CLASS=A
@@ -115,16 +121,19 @@ pre .c { color: var(--card-dim); }
   <p class="meta">Spring 2026</p>
   <p>Implements algorithms from academic papers to compute chip layout area, using Intel's FloorSet data. Simulated annealing minimizes a cost function of area plus wire length, and an interactive PyQt app lets you watch the layout improve at each step.</p>
 
-  <h3><a href="https://github.com/schen0913/PiTunes">Multi-device Bluetooth speaker hub</a></h3>
+    <h3><a href="https://github.com/schen0913/PiTunes">Multi-device Bluetooth speaker hub</a></h3>
   <p class="meta">Fall 2025</p>
   <p>A Raspberry Pi that acts as a discoverable Bluetooth device and tracks which phones and laptops are connected, using a small database of MAC addresses. A web app on the Pi lets users pick which device plays audio. I could not find anyone who had built it this way, so I learned how the Linux Bluetooth and audio tools fit together and combined them myself.</p>
 
-  <h3><a href="https://devpost.com/software/specter-67bu40">AI For Good Hackathon</a></h3>
+
+<img id="hackathon" src="hackathon_presenting.jpg">
+    <h3><a href="https://devpost.com/software/specter-67bu40">AI For Good Hackathon</a></h3>
   <p class="meta">Fall 2025</p>
   <p>In 48 hours, my team built a logistic regression model that predicts which neighborhoods are at high risk of housing displacement, using historical census data and open-source geographic boundaries. We presented the results to a panel of local business and community organization representatives.</p>
+
 </section>
 
-<section>
+<section id="exp">
   <h2>Work experience</h2>
   <h3>Technology Instructor, Code Ninjas</h3>
   <p class="meta">Jacksonville, FL | February 2025 to present</p>
@@ -148,7 +157,7 @@ pre .c { color: var(--card-dim); }
     <dd>GitHub, Docker, Microsoft Office</dd>
   </dl>
 </section>
-
 </main>
 </body>
 </html>
+
